@@ -44,7 +44,7 @@ public class Restaurant {
 	
 	public void pesanMenuMakanan(String nama,byte jumlah) {
 		byte idTemp = menu_makanan.cariIdMakanan(nama);
-		if(menu_makanan.getStok(idTemp)>=jumlah) {
+		if(menu_makanan.getStok(idTemp)>=jumlah && idTemp != -1) {
 			menu_makanan.setStok(-jumlah, idTemp);
 		}else {
 			if(menu_makanan.getStok(idTemp)>0) {
