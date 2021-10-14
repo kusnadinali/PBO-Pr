@@ -3,11 +3,11 @@ package com.praktek;
 public class RestaurantMain {
 	static void inisialisasiMakanan(Restaurant menu) {
 		menu.tambahMenuMakanan("Bala-Bala", 1_000, 20);
-		Restaurant.nextId();
+//		Restaurant.nextId();
 		menu.tambahMenuMakanan("Gehu", 1_000, 20);
-		Restaurant.nextId();
+//		Restaurant.nextId();
 		menu.tambahMenuMakanan("Tahu", 1_000, 0);
-		Restaurant.nextId();
+//		Restaurant.nextId();
 		menu.tambahMenuMakanan("Molen", 1_000, 20);
 	}
 	public static void main(String[] args) {

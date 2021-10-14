@@ -5,7 +5,7 @@ public class Restaurant {
 //	private double[] harga_makanan;
 //	private int[] stok;
 	private Makanan menu_makanan;
-	private static byte idMakanan=0;
+//	private static byte idMakanan=0;
 	
 	public Restaurant() {
 //		this.nama_makanan = new String[10];
@@ -17,12 +17,13 @@ public class Restaurant {
 //		this.nama_makanan[idMakanan] = nama;
 //		this.harga_makanan[idMakanan] = harga;
 //		this.stok[idMakanan] = stok;
-		menu_makanan.setNama_makanan(nama, idMakanan);
-		menu_makanan.setHarga_makanan(harga, idMakanan);
-		menu_makanan.setStok(stok, idMakanan);
+		menu_makanan.setNama_makanan(nama);
+		menu_makanan.setHarga_makanan(harga);
+		menu_makanan.setStok(stok,Makanan.getIdMakanan());
+		Makanan.nextIdMakanan();
 	}
 	public void tampilMenuMakanan(){
-		for(byte i =0; i<=idMakanan;i++){//mengganti tipe data i menjadi byte dari int
+		for(byte i =0; i<= Makanan.getIdMakanan() ;i++){//mengganti tipe data i menjadi byte dari int
 			if(!isOutOfStock(i)){
 				//System.out.println(nama_makanan[i] +"["+stok[i]+"]"+"\tRp. "+harga_makanan[i]);
 				System.out.println(menu_makanan.getNama_makanan(i) +"["+menu_makanan.getStok(i)+"]"+"\tRp. "+menu_makanan.getHarga_makanan(i));
@@ -37,9 +38,9 @@ public class Restaurant {
 			return false;
 		}
 	}
-	public static void nextId(){
-		idMakanan++;
-	}
+//	public static void nextId(){
+//		idMakanan++;
+//	}
 	
 	public void pesanMenuMakanan(String nama,byte jumlah) {
 		byte idTemp = menu_makanan.cariIdMakanan(nama);
