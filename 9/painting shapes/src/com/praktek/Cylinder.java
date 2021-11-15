@@ -19,5 +19,4 @@ public class Cylinder extends Shapes{
 	{
 		return super.toString() + " of radius " + radius + " and height " + height;
 	}
-
 }
