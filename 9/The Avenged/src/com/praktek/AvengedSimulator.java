@@ -1,6 +1,7 @@
 package com.praktek;
 
 import java.util.*;
+//import java.lang.*;
 
 public class AvengedSimulator {
 	public static void addSuperHero(List<SuperHero> s,String name,int level,String hero) {
@@ -40,7 +41,9 @@ public class AvengedSimulator {
 		 addSuperHero(superhero, "Arnastria", 666, "DirtyBubble");
 		 
 		 //sorting
-		 sortLevelAsc(superhero);
+//		 sortLevelAsc(superhero);
+		 //sorting dengan comparable
+		 Collections.sort(superhero);
 		 
 		 for (SuperHero dede : superhero) {
 			 System.out.println("===============================");

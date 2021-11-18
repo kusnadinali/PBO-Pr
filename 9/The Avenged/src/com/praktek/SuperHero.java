@@ -2,8 +2,9 @@ package com.praktek;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.Comparable;
 
-public abstract class SuperHero {
+public abstract class SuperHero implements Comparable<SuperHero>{
 	protected int powerLevel;
 	protected String name;
 	protected List<Power> powerList;
@@ -38,4 +39,14 @@ public abstract class SuperHero {
 			temp.doPower();
 		}
 	};
+	
+	@Override
+	public int compareTo(SuperHero o){
+		if(this.powerLevel > o.powerLevel) {
+			return 1;
+		}else if(this.powerLevel < o.powerLevel) {
+			return -1;
+		}
+		return 0;
+	}
 }
