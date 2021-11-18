@@ -13,7 +13,7 @@ public class DirtyBubble extends SuperHero {
 	@Override
 	public void identity() {
 		// TODO Auto-generated method stub
-		System.out.printf("It's %s, the FlyingDutchMan! It has the power level of %d\n",this.name,this.powerLevel);
+		System.out.printf("It's %s, the DirtyBubble! It has the power level of %d\n",this.name,this.powerLevel);
 		System.out.println(".....HEED ME.....");
 	}
 

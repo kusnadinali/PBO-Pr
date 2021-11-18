@@ -21,7 +21,7 @@ public class Commission extends Hourly{
 	{
 	  String result = super.toString();
 
-	  result += "\nTotal Sales: " + totalSales;
+	  result += "\naing Total Sales: " + totalSales;
 
 	  return result;
 	}
